@@ -75,6 +75,47 @@
             <li>Appeared on the local web magazine cover.</li>
         </ul>
     </section>
+<script>
+    
+    function showAgeAlert() {
+        
+        var userAge = prompt('Please enter your age:');
+
+        
+        if (userAge !== null) {
+           
+            userAge = parseInt(userAge);
+
+            
+            if (!isNaN(userAge) && userAge >= 18) {
+               
+                alert('You are eligible. Welcome!');
+            } else {
+                
+                alert('Sorry, you are not eligible. You must be 18 or older.');
+            }
+        }
+    }
+
+    window.onload = showAgeAlert;
+	function handleSubmit(event) {
+    var emailInput = document.querySelector('.contact__form-el--email');
+    var emailValue = emailInput.value.trim();
+
+    if (emailValue === '') {
+        alert('Veuillez saisir votre adresse e-mail.');
+        event.preventDefault();
+    } else {
+        alert('Formulaire soumis avec succès!\nAdresse e-mail: ' + emailValue);
+    }
+}
+
+var form = document.querySelector('.contact__form');
+form.addEventListener('submit', handleSubmit);
+
+</script>
+
+
 
 </body>
 </html>

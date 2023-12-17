@@ -1,54 +1,86 @@
-
-<html >
+<!DOCTYPE html>
+<html>
 <head>
-    
     <title>Contact</title>
-	 <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <script>
+        function onPageLoad() {
+            var userAge = prompt('Please enter your age:');
+            
+            if (userAge !== null) {
+                userAge = parseInt(userAge);
 
+                if (!isNaN(userAge) && userAge >= 18) {
+                    alert('You are eligible. Welcome!');
+                } else {
+                    alert('Sorry, you are not eligible. You must be 18 or older.');
+                }
+            }
+
+            // Ajout de l'événement mouseleave à l'élément avec l'ID "targetElement"
+            var targetElement = document.getElementById('targetElement');
+
+            if (targetElement) {
+                targetElement.addEventListener('mouseleave', function() {
+                    alert('Mouse leaves the target element!');
+                });
+            }
+        }
+
+        function ChangeValue() {
+            document.getElementById("name").value = "Have a nice day!";
+        }
+    </script>
 </head>
+<body onload="onPageLoad()">
 
-<body>
+    <!-- SECTION: Splashscreen -->
+    <div class="splashscreen">
+        <div class="preloader">
+            <span class="preloader__text">Loading</span>
+        </div>
+    </div>
+    <!-- END SECTION: Splashscreen -->
 
-	<!-- SECTION: Splashscreen -->
-	<div class="splashscreen">
-		<div class="preloader">
-			<span class="preloader__text">Loading</span>
-		</div>
-	</div>
-	<!-- END SECTION: Splashscreen -->
-	<!-- SECTION: Intro -->
-  <header class="header">
-		<!-- SECTION: Navigation -->
-	<div id="top" class="navigation">
-		<div class="navigation__wrapper wrapper--large">
-			<a class="navigation__logo logo" href="#0">Logo</a>
-			<nav class="navigation__container">
-				<ul class="navigation__list">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="cv.html">Portfolio</a></li>
-					<li><a href="Parcours.html">Parcours</a></li>
-					<li><a href="Experiences.html">Experiences</a></li>
-					
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
+    <!-- SECTION: Intro -->
+    <header class="header">
+        <!-- SECTION: Navigation -->
+        <div id="top" class="navigation">
+            <div class="navigation__wrapper wrapper--large">
+                <a class="navigation__logo logo" href="#0">Logo</a>
+                <nav class="navigation__container">
+                    <ul class="navigation__list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cv.html">Portfolio</a></li>
+                        <li><a href="Parcours.html">Parcours</a></li>
+                        <li><a href="Experiences.html">Experiences</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
 
-    <section>
-    <hr>
-        <h2>Coordonnées:</h2>
-		   <img src="images/310903646_1118256825479088_1727358879232073774_n.jpg"width="200" height="200">
-        <ul>
-            <p> <img src="images/mail.jpeg"width="17" height="17">Email: hadhemi.belgacem@esprit.tn</p>
-            <p><img src="images/tel.jpg"width="17" height="17">Téléphone: +216 52599077</p>
-            <p><img src="images/home.png"width="17" height="17">Adresse: gabes</p>
-        </ul>
-<hr>
-        <p><h4>Page Facebook :<h4> <a href="https://www.facebook.com/profile.php?id=100004003660597" target="_blank">hadhemy.com</a></p>
-    </section>
+        <section>
+            <hr>
+            <h2>Coordonnées:</h2>
+            <img src="images/310903646_1118256825479088_1727358879232073774_n.jpg" width="200" height="200">
+            <ul>
+                <p> <img src="images/mail.jpeg" width="17" height="17">Email: hadhemi.belgacem@esprit.tn</p>
+                <p><img src="images/tel.jpg" width="17" height="17">Téléphone: +216 52599077</p>
+                <p><img src="images/home.png" width="17" height="17">Adresse: gabes</p>
+            </ul>
+            <hr>
+            <p><h4>Page Facebook :</h4> <a href="https://www.facebook.com/profile.php?id=100004003660597" target="_blank" onclick="showAlert()">hadhemy.com</a></p>
+        </section>
 
-    <footer>
-        <p>Retour vers <a href="index.html">Accueil</a></p>
-    </footer>
-
+        <footer>
+            <p>Retour vers <a href="index.html">Accueil</a></p>
+        </footer>
+        
+        <!-- Ajout de l'élément input -->
+        <body>
+            <input type="text" id="name" onmouseleave="ChangeValue()">
+        </body>
+    </header>
 </body>
 </html>
