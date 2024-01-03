@@ -107,29 +107,28 @@
     </footer>
 
     <section>
-        <h2>Contactez-moi</h2>
-        <form id="contactForm" onsubmit="return validateForm()">
-            <label for="name">Nom:</label>
-            <input type="text" id="name" name="name" required>
+    <h2>Contactez-moi</h2>
+    <form id="contactForm" onsubmit="return validateForm()">
+        <label for="name">Nom:</label>
+        <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
 
-            <input type="submit" value="Envoyer">
-      
-        <form id="contactForm" onsubmit="return validateForm()">
-            <!-- ... Vos champs existants ... -->
+        <input type="submit" value="Envoyer">
+    </form>
 
-            <!-- Nouveau champ pour le numéro de CIN -->
-            <label for="cin">Numéro de CIN:</label>
-            <input type="text" id="cin" name="cin" maxlength="8" required>
+    <!-- Nouveau formulaire avec un ID différent -->
+    <form id="cinForm" onsubmit="return validateForm()">
+        <label for="cin">Numéro de CIN:</label>
+        <input type="text" id="cin" name="cin" maxlength="8" required>
 
-            <input type="submit" value="Envoyer">
-        </form>
-    </section>
+        <input type="submit" value="Envoyer">
+    </form>
+</section>
 
     <script>
         function validateForm() {
