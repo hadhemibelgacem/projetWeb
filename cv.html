@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon CV</title>
     <link rel="stylesheet" type="text/css" href="cv.css">
 </head>
@@ -23,6 +24,30 @@
             </div>
         </div>
     </header>
+
+    <section>
+        <h2>Contactez-moi</h2>
+        <form id="contactForm" onsubmit="return validateForm('contactForm')">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Envoyer">
+        </form>
+
+        <!-- Nouveau formulaire avec un ID différent -->
+        <form id="cinForm" onsubmit="return validateForm('cinForm')">
+            <label for="cin">Numéro de CIN:</label>
+            <input type="text" id="cin" name="cin" maxlength="8" required>
+
+            <input type="submit" value="Envoyer">
+        </form>
+    </section>
 
     <section>
         <h2>À PROPOS</h2>
